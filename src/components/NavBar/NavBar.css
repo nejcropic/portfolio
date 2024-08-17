@@ -1,0 +1,41 @@
+.navbar{    
+    height: 5rem;
+}
+
+.wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--mainColor);
+    height: 100%;
+    z-index: 2;
+}
+
+.wrapper span{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 4rem;
+    color: var(--secondaryColor);
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+    margin: 0;
+}
+
+.social img{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+}
+@media screen and (max-width: 1000px) {
+    .social img{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+}

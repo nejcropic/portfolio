@@ -1,0 +1,124 @@
+.portfolio {
+  position: relative;
+}
+.projekti-section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: visible;
+  color: white;
+}
+.projekti {
+  position: relative;
+  overflow: visible; /* Ensure parent doesn't block sticky behavior */
+}
+.projekti h1{
+  color: white;
+}
+.progress {
+  position: sticky;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: var(--secondaryColor);
+  z-index: 100; /* Make sure it's above other content */
+  width: 100%; 
+  font-size: 2rem;
+  font-family: var(--fontFamily-main);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .progress {
+    padding-top: calc(100vh - 100px);
+  }
+  .progress h1 {
+    font-size: 1.7rem;
+  }
+}
+.progressBar {
+  height: 10px;
+  background-color: white;
+}
+.projekti-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  font-family: var(--fontFamily-main);
+}
+.projekti-wrapper {
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .projekti-wrapper {
+    flex-direction: column;
+  }
+}
+.projekti-imageContainer {
+  flex: 1;
+  height: 50%;
+}
+@media (max-width: 768px) {
+  .projekti-imageContainer {
+    width: 100%;
+    max-height: 20rem;
+  }
+}
+.projekti-imageContainer img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .projekti-imageContainer img {
+    object-fit: contain;
+  }
+}
+.projekti-textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .projekti-textContainer {
+    transform: none !important;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+.projekti-textContainer h2 {
+  font-size: 72px;
+}
+@media (max-width: 768px) {
+  .projekti-textContainer h2 {
+    font-size: 1.3rem;
+  }
+}
+.projekti-textContainer p {
+  color: gray;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .projekti-textContainer p {
+    font-size: 1rem;
+  }
+}
+.projekti-textContainer button {
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
