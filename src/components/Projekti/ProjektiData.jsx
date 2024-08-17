@@ -1,8 +1,8 @@
 /* import ToplarPhone from "../../images/iphone_toplar.png"; */
+import UmsPhone from "../../images/iphone_ums.png";
 import ToplarPhone from "../../images/iphone_toplar.png";
-import UmsPhone from "../../images/iphone_toplar.png";
-import JozePhone from "../../images/iphone_toplar.png";
-import DvojcekPhone from "../../images/iphone_toplar.png";
+import JozePhone from "../../images/iphone_joze.png";
+import DvojcekPhone from "../../images/iphone_dvojcek.png";
 /* const items = [
   {
     id: 1,
@@ -17,7 +17,7 @@ const items = [
     link: "https://www.ums.si/",
     title: "UMS d.o.o",
     image: UmsPhone,
-    data: "React JS",
+    data: "",
   },
   {
     id: 2,
@@ -33,13 +33,12 @@ const items = [
     image: JozePhone,
     data: "React JS",
   },
-  /* 
   {
     link: "https://hisadvojcek-ihan.si/",
     title: "Hiša Dvojček Ihan",
     image: DvojcekPhone,
     data: "React JS",
-  }, */
+  },
 ];
 
 export default items;

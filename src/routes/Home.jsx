@@ -12,32 +12,22 @@ import ScrollToTopButton from "../components/ScrollToTopButton/ScrollToTopButton
 */
 
 function Home() {
-  const ponudbaRef = useRef(null);
-  const projektiRef = useRef(null);
   const storitveRef = useRef(null);
-  const podatkiRef = useRef(null);
+  const projektiRef = useRef(null);
   const kontaktRef = useRef(null);
-  const galerijaRef = useRef(null);
 
   return (
     <ScrollProvider>
       <NavBar
         refs={{
-          ponudbaRef,
           storitveRef,
-          podatkiRef,
           projektiRef,
           kontaktRef,
-          galerijaRef,
         }}
       />
       <Hero />
-      <Projekti
-        refs={{
-          ponudbaRef,
-        }}
-      />
-
+      <Services ref={storitveRef} />
+      <Projekti ref={projektiRef} />
       <Footer />
     </ScrollProvider>
   );

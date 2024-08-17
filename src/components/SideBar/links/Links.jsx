@@ -14,6 +14,7 @@ const variants = {
     },
   },
 };
+
 const itemVariants = {
   open: {
     y: 0,
@@ -25,19 +26,47 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
-  const items = ["O meni", "Projekti", "Portfolio"];
+const links = [
+  {
+    id: 0,
+    title: "Storitve",
+    ref: "storitveRef",
+  },
+  {
+    id: 2,
+    title: "Projekti",
+    ref: "projektiRef",
+  },
+  {
+    id: 3,
+    title: "Kontakt",
+    ref: "kontaktRef",
+  },
+];
+
+const Links = ({ refs, setOpen }) => {
+  const scrollToRef = (refName) => {
+    const ref = refs[refName];
+    if (ref && ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: "smooth",
+      });
+      setOpen(false); // Close the sidebar
+    }
+  };
 
   return (
     <motion.div className="links" variants={variants}>
-      {items.map((item) => (
+      {links.map((item) => (
         <motion.div
-          key={item}
+          key={item.id}
+          onClick={() => scrollToRef(item.ref)}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Link to={`#${item}`}>{item}</Link>
+          <Link to="#">{item.title}</Link>
         </motion.div>
       ))}
     </motion.div>

@@ -23,15 +23,15 @@
   color: white;
   margin: auto;
   position: absolute;
+  text-align: center;
 }
 @media screen and (max-width: 1000px) {
   .textContainer{
     height: 50%;
     width: 100%;
     gap: 20px;
-    text-align: center;
     margin: 0;
-    top: 15%;
+    top: 10%;
     left: 0;
   }
 }
@@ -84,7 +84,7 @@ right: 0;
     height: 50%;
     width: 100%;
     top: unset;
-    bottom: 0;  
+    bottom: 5%;  
   }
 }
 .compImg{

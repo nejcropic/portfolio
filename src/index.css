@@ -31,7 +31,7 @@
 
 html {
   scroll-padding-top: 5rem; /* Match the NavBar height */
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
 }
 

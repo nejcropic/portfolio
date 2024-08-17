@@ -7,10 +7,10 @@ import GitHub from "../../icons/github.png";
 import Facebook from "../../icons/facebook.png";
 import LinkedIn from "../../icons/linkedin.png";
 import Instagram from "../../icons/instagram.png";
-function NavBar() {
+function NavBar({ refs }) {
   return (
     <div className="navbar">
-      <SideBar />
+      <SideBar refs={refs} />
       <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}

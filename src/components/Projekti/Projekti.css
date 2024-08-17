@@ -30,7 +30,7 @@
 
 @media (max-width: 768px) {
   .progress {
-    padding-top: calc(100vh - 100px);
+    padding-top: calc(100vh - 4rem);
   }
   .progress h1 {
     font-size: 1.7rem;
@@ -70,13 +70,14 @@
 @media (max-width: 768px) {
   .projekti-imageContainer {
     width: 100%;
-    max-height: 20rem;
+    max-height: 24rem;
   }
 }
 .projekti-imageContainer img {
   width: auto;
   height: 100%;
   object-fit: cover;
+  clip-path: inset(8% 14% 8% 14% round 8%);
 }
 @media (max-width: 768px) {
   .projekti-imageContainer img {
@@ -98,7 +99,7 @@
   }
 }
 .projekti-textContainer h2 {
-  font-size: 72px;
+  font-size: 2.5rem;
 }
 @media (max-width: 768px) {
   .projekti-textContainer h2 {
@@ -121,4 +122,5 @@
   padding: 10px;
   width: 200px;
   cursor: pointer;
+  text-transform: uppercase;
 }

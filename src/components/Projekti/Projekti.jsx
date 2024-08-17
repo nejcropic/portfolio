@@ -1,11 +1,11 @@
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import "./Projekti.css";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import items from "./ProjektiData";
 
 const Single = ({ item }) => {
-  const ref = useRef();
+  const ref = useRef(); // Internal ref for the image container
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -33,11 +33,10 @@ const Single = ({ item }) => {
   );
 };
 
-const Portfolio = () => {
-  const ref = useRef();
-
+// Use forwardRef to pass the ref down to the div element in Projekti
+const Projekti = forwardRef((props, ref) => {
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: ref, // This is the external ref from Home.jsx
     offset: ["end end", "start start"],
   });
 
@@ -57,6 +56,6 @@ const Portfolio = () => {
       ))}
     </div>
   );
-};
+});
 
-export default Portfolio;
+export default Projekti;

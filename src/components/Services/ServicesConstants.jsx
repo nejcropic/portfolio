@@ -1,12 +1,36 @@
-const Styling = {
-  backgroundColor: "rgba(255,255,255)",
-  hoverColor: "var(--secondaryColor)",
-  hoverColorNone: "var(--mainColor)",
-  phoneColor: "var(--secondaryColor)",
-  hoverCompSize: "1.5rem",
-  CompSize: "1.2rem",
-  phoneSize: "0.8rem",
-  transitionDuration: "0.5",
-};
+import NovaSpletna from "../../icons/web-developer.gif";
 
-export default Styling;
+export const categories = {
+  "Spletne strani": {
+    icon: NovaSpletna,
+    items: [
+      "Izdelava nove spletne strani",
+      "Posodobitev obstoječe spletne strani",
+      "Odziven spletni dizajn",
+    ],
+  },
+  "Avtomatizacija vsakodnevnih storitev": {
+    icon: NovaSpletna,
+    items: [
+      "Generiranje excel in word datotek",
+      "Datoteke in programi na različnih inženirskih področjih:\n- strojništvo (Solidworks, CAD)\n- gradbeništvo (BIM)\n- elektrotehnika (obdelava signalov) ",
+      "Skripte za avtomatizacijo nalog",
+    ],
+  },
+  "Obdelava in analiza podatkov": {
+    icon: NovaSpletna,
+    items: [
+      "Obdelovanje datotek (.csv, .json, ___)",
+      "Vizualizacija podatkov (grafi, interaktivni diagrami)",
+      "Analiza statističnih podatkov in poročanje",
+    ],
+  },
+  "Komunikacija in upravljanje z napravami": {
+    icon: NovaSpletna,
+    items: [
+      "Komunikacije prek kabla (USB, RS232, RS485)",
+      "Izdelava uporabniškega vmesnika",
+      "Integracija naprav (API povezave, MQTT)",
+    ],
+  },
+};
