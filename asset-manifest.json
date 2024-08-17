@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d4a983ae.css",
+    "main.js": "/portfolio/static/js/main.508e125b.js",
+    "static/media/toplar_comp.png": "/portfolio/static/media/toplar_comp.06e362cca320cca2d0dd.png",
+    "static/media/joze_comp.png": "/portfolio/static/media/joze_comp.e0bdd870bfc1e2305c87.png",
+    "static/media/dvojcek_comp.png": "/portfolio/static/media/dvojcek_comp.5b96ce3c7a9b58ff7548.png",
+    "static/media/ums_comp.png": "/portfolio/static/media/ums_comp.36e33fbe152f821c34e8.png",
+    "static/media/iphone_toplar.png": "/portfolio/static/media/iphone_toplar.8e468de7ff9138d49cca.png",
+    "static/media/iphone_joze.png": "/portfolio/static/media/iphone_joze.5dfb8c28710ef519f830.png",
+    "static/media/iphone_dvojcek.png": "/portfolio/static/media/iphone_dvojcek.6d614eac1a59b82d22e8.png",
+    "static/media/comp_python.png": "/portfolio/static/media/comp_python.8a9bda39b4a873016aff.png",
+    "static/media/iphone_ums.png": "/portfolio/static/media/iphone_ums.1c5c3b4e73be936b31ca.png",
+    "static/media/iphone_ums_hero.png": "/portfolio/static/media/iphone_ums_hero.575ce7b84fb19e65365a.png",
+    "static/media/toplar_phone.png": "/portfolio/static/media/toplar_phone.98ad3202e9a30beb968e.png",
+    "static/media/web-developer.gif": "/portfolio/static/media/web-developer.d40a4afd1684da053c1d.gif",
+    "static/media/joze_phone.png": "/portfolio/static/media/joze_phone.d9f1cd59ee699aee978a.png",
+    "static/media/ums_phone.png": "/portfolio/static/media/ums_phone.3c821dc6ce68e5a5ad4b.png",
+    "static/media/instagram.png": "/portfolio/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/github.png": "/portfolio/static/media/github.f3d873d71aa989badfd2.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.d962e6ba2c7655840acd.png",
+    "static/media/linkedin.png": "/portfolio/static/media/linkedin.f249b38224ca41a0b909.png",
+    "index.html": "/portfolio/index.html",
+    "main.d4a983ae.css.map": "/portfolio/static/css/main.d4a983ae.css.map",
+    "main.508e125b.js.map": "/portfolio/static/js/main.508e125b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4a983ae.css",
+    "static/js/main.508e125b.js"
+  ]
+}
