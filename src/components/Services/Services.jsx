@@ -33,8 +33,8 @@ const Services = forwardRef((props, ref) => {
     >
       <motion.div className="textContainer-services" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          Digitaliziram vaše procese,
+          <br /> poenostavim vaše delo
         </p>
         <hr />
       </motion.div>
@@ -43,19 +43,19 @@ const Services = forwardRef((props, ref) => {
           <img src={Image} alt="" />
           <h1>
             <motion.b whileHover={{ color: "var(--secondaryColor)" }}>
-              Unique
+              Nove
             </motion.b>{" "}
-            Ideas
+            ideje,
           </h1>
         </div>
         <div className="title">
           <h1>
             <motion.b whileHover={{ color: "var(--secondaryColor)" }}>
-              For Your
+              hitrejše
             </motion.b>{" "}
-            Business.
+            poslovanje.
           </h1>
-          <button>WHAT WE DO?</button>
+          <button>KAJ POČNEM?</button>
         </div>
       </motion.div>
       <div className="listContainer-flex">
@@ -69,10 +69,29 @@ const Services = forwardRef((props, ref) => {
                 <h2>{category}</h2>
                 <img src={categories[category].icon} alt={category} />
               </div>
-              {categories[category].items.map((item, itemIndex) => (
-                <p key={itemIndex}>{item}</p>
-              ))}
-              <button>Go</button>
+              <div>
+                {categories[category].items.map((item, itemIndex) =>
+                  typeof item === "string" ? (
+                    <p key={itemIndex}>{item}</p>
+                  ) : (
+                    <div className="box-more" key={itemIndex}>
+                      <p>{item.title}</p>
+                      <ul>
+                        {item.subItems.map((subItem, subItemIndex) => (
+                          <li
+                            key={subItemIndex}
+                            style={{ paddingLeft: "10px" }}
+                          >
+                            {subItem}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <button>Preberi več</button>
             </motion.div>
           </motion.div>
         ))}

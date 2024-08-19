@@ -15,7 +15,7 @@
   --transparentWhiteColor: rgba(255, 255, 255,0.55);
   --white: hsla(0, 0%, 100%, 1);
   --black: hsla(0, 0%, 0%, 1);
-  --grey: grey;
+  --gray: gray;
   /* fonts */
   --fontFamily-forum: 'Forum', cursive;
   --fontFamily-dm_sans: 'DM Sans', sans-serif;
@@ -29,9 +29,9 @@
 
 }
 
-html {
-  scroll-padding-top: 5rem; /* Match the NavBar height */
-  scroll-snap-type: y mandatory; /* scroll-snap-type: y mandatory; */
+html {/* 
+  scroll-padding-top: 5rem;  */
+  scroll-snap-type: y proximity; /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
 }
 

@@ -7,6 +7,7 @@ import GitHub from "../../icons/github.png";
 import Facebook from "../../icons/facebook.png";
 import LinkedIn from "../../icons/linkedin.png";
 import Instagram from "../../icons/instagram.png";
+import Logo from "../../images/logo_cut.png";
 function NavBar({ refs }) {
   return (
     <div className="navbar">
@@ -14,10 +15,10 @@ function NavBar({ refs }) {
       <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          NR
+          <img src={Logo} alt="" />
         </motion.span>
         <div className="social">
           <Link to="https://www.linkedin.com/in/nejc-ropi%C4%8D-a03157205/">

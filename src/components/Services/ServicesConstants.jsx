@@ -1,8 +1,11 @@
-import NovaSpletna from "../../icons/web-developer.gif";
+import Spletna from "../../icons/mobile.png";
+import Avtomatizacija from "../../icons/app-development.png";
+import Podatki from "../../icons/data-analysis.png";
+import Naprave from "../../icons/dashboard.png";
 
 export const categories = {
   "Spletne strani": {
-    icon: NovaSpletna,
+    icon: Spletna,
     items: [
       "Izdelava nove spletne strani",
       "Posodobitev obstoječe spletne strani",
@@ -10,23 +13,30 @@ export const categories = {
     ],
   },
   "Avtomatizacija vsakodnevnih storitev": {
-    icon: NovaSpletna,
+    icon: Avtomatizacija,
     items: [
       "Generiranje excel in word datotek",
-      "Datoteke in programi na različnih inženirskih področjih:\n- strojništvo (Solidworks, CAD)\n- gradbeništvo (BIM)\n- elektrotehnika (obdelava signalov) ",
+      {
+        title: "Datoteke in programi na različnih inženirskih področjih:",
+        subItems: [
+          "Strojništvo (Solidworks, CAD),",
+          "Gradbeništvo (BIM),",
+          "Elektrotehnika (obdelava signalov)",
+        ],
+      },
       "Skripte za avtomatizacijo nalog",
     ],
   },
   "Obdelava in analiza podatkov": {
-    icon: NovaSpletna,
+    icon: Podatki,
     items: [
-      "Obdelovanje datotek (.csv, .json, ___)",
+      "Obdelovanje datotek (.csv,  .json,  .xml)",
       "Vizualizacija podatkov (grafi, interaktivni diagrami)",
       "Analiza statističnih podatkov in poročanje",
     ],
   },
   "Komunikacija in upravljanje z napravami": {
-    icon: NovaSpletna,
+    icon: Naprave,
     items: [
       "Komunikacije prek kabla (USB, RS232, RS485)",
       "Izdelava uporabniškega vmesnika",

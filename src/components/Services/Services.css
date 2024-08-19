@@ -65,14 +65,14 @@
     }
 }
   .title img {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
   }
   @media screen and (max-width: 1000px) {
     .title img{
-        width: 4rem;
-        height: 4rem;
+        width: 200px;
+        height: 50px;
     }
 } 
 .title h1 {
@@ -81,7 +81,7 @@
 }
 @media screen and (max-width: 1000px) {
   .title h1{
-    font-size: 36px;
+    font-size: 2rem;
   }
 }
 .title button  {
@@ -151,19 +151,43 @@
     }
   } */
  
-  
-  .box p {
-    margin-bottom: 1rem;
-    white-space: pre-line;
-  }
-  
-  .box button {
+.box div {
+    width: 100%;
+}
+.box p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: var(--gray);
+    text-align: left;
+}
+  /* Bold styling for titles */
+.box p b {
+    color: #444;
+}
+@media screen and (max-width: 1000px) {
+    .box div {
+        width: 90%;
+        padding-left: 2rem;
+    }
+    .box p{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+.box span {
+    font-size: 1rem;
+    color: #555;
+}
+
+.box button {
     padding: 10px;
     background-color: orange;
     border: none;
     cursor: pointer;
-  }
-  @media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 1000px) {
     .box button{
         background-color: transparent;
         border: 1px solid orange;
@@ -172,16 +196,35 @@
         width: 50%;
         padding: 5px;
     }
-  }
-  .box img {
-    width: 1rem;
-    height: 1rem;
-  }
-  .box-flex {
+}
+
+.box img {
+    width: 4rem;
+    height: 4rem;
+}
+.box h2 {
+    text-align: right;
+}
+.box-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-bottom: 1rem;
-  }
+    width: 100%;
+}
+.box div span {
+    width: 90%;
+}
+.box-more {
+    width: 100%;
+    padding-left: 0%;
+}
+.box ul {
+    margin-left: 3rem;
+}
+.box li {
+    font-size: 0.8rem;
+    color: #555;
+}
