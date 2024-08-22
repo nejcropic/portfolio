@@ -24,6 +24,21 @@ const textVariants = {
       duration: 2,
       repeat: Infinity,
     },
+    zIndex: 5,
+  },
+};
+const imageVariants = {
+  initial: {
+    x: 500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
   },
 };
 const sliderVariants = {
@@ -40,7 +55,15 @@ const sliderVariants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ projektiRef, kontaktRef }) => {
+  const scrollToRef = (ref) => {
+    if (ref && ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="hero">
       <div className="wrapper">
@@ -55,10 +78,18 @@ const Hero = () => {
             Spletne strani in avtomatizacija
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToRef(projektiRef)}
+            >
               Zadnji projekti
             </motion.button>
-            <motion.button variants={textVariants}>Kontakt</motion.button>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToRef(kontaktRef)}
+            >
+              Kontakt
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -76,10 +107,15 @@ const Hero = () => {
       >
         Python ReactJS
       </motion.div>
-      <div className="imageContainer">
+      <motion.div
+        variants={imageVariants}
+        initial="initial"
+        animate="animate"
+        className="imageContainer"
+      >
         <img className="compImg" src={CompPhoto} alt="" />
         <img className="phoneImg" src={PhonePhoto} alt="" />
-      </div>
+      </motion.div>
     </div>
   );
 };

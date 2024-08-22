@@ -29,9 +29,9 @@
 
 }
 
-html {/* 
-  scroll-padding-top: 5rem;  */
-  scroll-snap-type: y proximity; /* scroll-snap-type: y mandatory; */
+html {
+  scroll-padding-top: 5rem;  
+  scroll-snap-type: y mandatory; /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
 }
 

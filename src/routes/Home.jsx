@@ -6,6 +6,7 @@ import Hero from "../components/Hero/Hero";
 import Projekti from "../components/Projekti/Projekti";
 import Services from "../components/Services/Services";
 import Footer from "../components/Footer/Footer";
+import Kontakt from "../components/Kontakt/Kontakt";
 /* ";
 
 import ScrollToTopButton from "../components/ScrollToTopButton/ScrollToTopButton";
@@ -25,9 +26,11 @@ function Home() {
           kontaktRef,
         }}
       />
-      <Hero />
+      <Hero projektiRef={projektiRef} kontaktRef={kontaktRef} />
       <Services ref={storitveRef} />
       <Projekti ref={projektiRef} />
+      {/* 
+      <Kontakt ref={kontaktRef} /> */}
       <Footer />
     </ScrollProvider>
   );

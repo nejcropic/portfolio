@@ -151,10 +151,10 @@
     }
   } */
  
-.box div {
+.box-out {
     width: 100%;
 }
-.box p {
+.box-out p {
     margin: 0.2rem 0;
     font-size: 1rem;
     color: var(--gray);
@@ -165,13 +165,13 @@
     color: #444;
 }
 @media screen and (max-width: 1000px) {
-    .box div {
+    .box-out {
         width: 90%;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
-    .box p{
+    .box-out p{
         width: 100%;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -214,12 +214,13 @@
     margin-bottom: 1rem;
     width: 100%;
 }
-.box div span {
+.box-out span {
     width: 90%;
 }
 .box-more {
     width: 100%;
     padding-left: 0%;
+
 }
 .box ul {
     margin-left: 3rem;

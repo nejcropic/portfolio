@@ -69,7 +69,7 @@ const Services = forwardRef((props, ref) => {
                 <h2>{category}</h2>
                 <img src={categories[category].icon} alt={category} />
               </div>
-              <div>
+              <div className="box-out">
                 {categories[category].items.map((item, itemIndex) =>
                   typeof item === "string" ? (
                     <p key={itemIndex}>{item}</p>

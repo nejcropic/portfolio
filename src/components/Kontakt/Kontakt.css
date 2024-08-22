@@ -1,0 +1,103 @@
+.contact {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      width: 100%;
+      padding: 10px;
+      flex-direction: column;
+    }
+  }
+  
+  .kontakt-textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .kontakt-textContainer {
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+      margin-top: 70px;
+    }
+  }
+  
+  .kontakt-textContainer h1 {
+    font-size: 100px;
+    line-height: 88px;
+  }
+  
+  @media (max-width: 768px) {
+    .kontakt-textContainer h1 {
+      font-size: 36px;
+    }
+  }
+  
+  .kontakt-textContainer span {
+    font-weight: 300;
+  }
+  
+  .kontakt-formContainer {
+    flex: 1;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .kontakt-formContainer {
+      padding: 50px;
+      width: 100%;
+    }
+  }
+  
+  .kontakt-formContainer .phoneSvg {
+    stroke: orange;
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+  }
+  
+  .kontakt-formContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .kontakt-formContainer form input,
+  .kontakt-formContainer form textarea {
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .kontakt-formContainer form input,
+    .kontakt-formContainer form textarea {
+      padding: 10px;
+    }
+  }
+  
+  .kontakt-formContainer form button {
+    padding: 20px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .kontakt-formContainer form button {
+      padding: 10px;
+    }
+  }
+  
