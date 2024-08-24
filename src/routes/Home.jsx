@@ -7,10 +7,6 @@ import Projekti from "../components/Projekti/Projekti";
 import Services from "../components/Services/Services";
 import Footer from "../components/Footer/Footer";
 import Kontakt from "../components/Kontakt/Kontakt";
-/* ";
-
-import ScrollToTopButton from "../components/ScrollToTopButton/ScrollToTopButton";
-*/
 
 function Home() {
   const storitveRef = useRef(null);
@@ -19,13 +15,6 @@ function Home() {
 
   return (
     <ScrollProvider>
-      <NavBar
-        refs={{
-          storitveRef,
-          projektiRef,
-          kontaktRef,
-        }}
-      />
       <Hero
         storitveRef={storitveRef}
         projektiRef={projektiRef}
@@ -33,8 +22,7 @@ function Home() {
       />
       <Services ref={storitveRef} />
       <Projekti ref={projektiRef} />
-      {/* 
-      <Kontakt ref={kontaktRef} /> */}
+      <Kontakt kontaktRef={kontaktRef} />
       <Footer />
     </ScrollProvider>
   );

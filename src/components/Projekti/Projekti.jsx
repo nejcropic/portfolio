@@ -22,7 +22,14 @@ const Single = ({ item }) => {
           </div>
           <motion.div className="projekti-textContainer" style={{ y }}>
             <h2>{item.title}</h2>
-            <p>{item.data}</p>
+            <p>
+              Uporabljene tehnologije: <br />
+              <ul>
+                {item.data.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </p>
             <Link to={item.link}>
               <button>Obišči stran</button>
             </Link>

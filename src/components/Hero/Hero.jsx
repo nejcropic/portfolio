@@ -3,6 +3,7 @@ import { color, motion } from "framer-motion";
 import CompPhoto from "../../images/comp_python.png";
 import PhonePhoto from "../../images/iphone_ums_hero.png";
 import arrowDown from "../../icons/arrow-square-down.png";
+import NavBar from "../NavBar/NavBar";
 
 const textVariants = {
   initial: {
@@ -68,6 +69,13 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
   };
   return (
     <div className="hero">
+      <NavBar
+        refs={{
+          storitveRef,
+          projektiRef,
+          kontaktRef,
+        }}
+      />
       <div className="wrapper">
         <motion.div
           className="textContainer"

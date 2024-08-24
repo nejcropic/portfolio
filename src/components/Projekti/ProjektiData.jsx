@@ -17,27 +17,27 @@ const items = [
     link: "https://www.ums.si/",
     title: "UMS d.o.o",
     image: UmsPhone,
-    data: "",
+    data: ["React JS", "HTML", "CSS"],
   },
   {
     id: 2,
     link: "https://picerija-toplar.si/",
     title: "Picerija Toplar",
     image: ToplarPhone,
-    data: "React JS",
+    data: ["React JS", "HTML", "CSS"],
   },
   {
     id: 3,
     link: "https://joze-sinkovec.si/",
     title: "Jože Šinkovec, s.p.",
     image: JozePhone,
-    data: "React JS",
+    data: ["React JS", "HTML", "CSS"],
   },
   {
     link: "https://hisadvojcek-ihan.si/",
     title: "Hiša Dvojček Ihan",
     image: DvojcekPhone,
-    data: "React JS",
+    data: ["React JS", "HTML", "CSS"],
   },
 ];
 

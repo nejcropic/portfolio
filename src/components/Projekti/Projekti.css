@@ -8,6 +8,7 @@
   overflow: visible;
   color: white;
 }
+
 .projekti {
   position: relative;
   overflow: visible; /* Ensure parent doesn't block sticky behavior */
@@ -133,4 +134,13 @@
   cursor: pointer;
   text-transform: uppercase;
   z-index: 100;
+}
+
+.projekti-textContainer ul {
+  list-style-type: disc;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.projekti-textContainer li {
+  margin-bottom: 5px; /* Adjust spacing as needed */
 }
