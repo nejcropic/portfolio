@@ -12,14 +12,8 @@ function NavBar({ refs }) {
   return (
     <div className="navbar">
       <SideBar refs={refs} />
-      <div className="wrapper">
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <img src={Logo} alt="" />
-        </motion.span>
+      <div className="nav-left"></div>
+      <div className="navbar-wrapper">
         <div className="social">
           <Link to="https://www.linkedin.com/in/nejc-ropi%C4%8D-a03157205/">
             <img src={LinkedIn} alt="linkedin icon" />
@@ -34,6 +28,15 @@ function NavBar({ refs }) {
             <img src={Instagram} alt="instagram icon" />
           </Link>
         </div>
+      </div>
+      <div className="nav-right">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src={Logo} alt="" />
+        </motion.span>
       </div>
     </div>
   );

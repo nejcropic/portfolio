@@ -1,5 +1,5 @@
 import "./Hero.css";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import CompPhoto from "../../images/comp_python.png";
 import PhonePhoto from "../../images/iphone_ums_hero.png";
 import arrowDown from "../../icons/arrow-square-down.png";
@@ -44,18 +44,20 @@ const imageVariants = {
 const sliderVariants = {
   initial: {
     x: 0,
+    backgroundColor: "transparent",
   },
   animate: {
-    x: "-220%",
+    x: "-200%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 20,
+      duration: 10,
     },
+    backgroundColor: "transparent",
   },
 };
 
-const Hero = ({ projektiRef, kontaktRef }) => {
+const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
   const scrollToRef = (ref) => {
     if (ref && ref.current) {
       window.scrollTo({
@@ -91,12 +93,14 @@ const Hero = ({ projektiRef, kontaktRef }) => {
               Kontakt
             </motion.button>
           </motion.div>
-          <motion.img
+          <motion.button
+            className="hero-button"
             variants={textVariants}
             animate="scrollButton"
-            src={arrowDown}
-            alt=""
-          />
+            onClick={() => scrollToRef(storitveRef)}
+          >
+            <i class="fa-solid fa-circle-arrow-down"></i>
+          </motion.button>
         </motion.div>
       </div>
       <motion.div

@@ -26,7 +26,11 @@ function Home() {
           kontaktRef,
         }}
       />
-      <Hero projektiRef={projektiRef} kontaktRef={kontaktRef} />
+      <Hero
+        storitveRef={storitveRef}
+        projektiRef={projektiRef}
+        kontaktRef={kontaktRef}
+      />
       <Services ref={storitveRef} />
       <Projekti ref={projektiRef} />
       {/* 

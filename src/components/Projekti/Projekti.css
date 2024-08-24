@@ -4,7 +4,7 @@
 .projekti-section {
   height: 100vh;
   width: 100vw;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   overflow: visible;
   color: white;
 }
@@ -21,7 +21,7 @@
   left: 0;
   text-align: center;
   color: var(--secondaryColor);
-  z-index: 100; /* Make sure it's above other content */
+  z-index: 5; /* Make sure it's above other content */
   width: 100%; 
   font-size: 2rem;
   font-family: var(--fontFamily-main);
@@ -79,17 +79,20 @@
   object-fit: cover;
   clip-path: inset(8% 14% 8% 14% round 8%);
 }
+
 @media (max-width: 768px) {
   .projekti-imageContainer img {
     object-fit: contain;
   }
 }
+
 .projekti-textContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 @media (max-width: 768px) {
   .projekti-textContainer {
     transform: none !important;
@@ -98,24 +101,30 @@
     text-align: center;
   }
 }
+
 .projekti-textContainer h2 {
   font-size: 2.5rem;
 }
+
 @media (max-width: 768px) {
   .projekti-textContainer h2 {
     font-size: 1.3rem;
   }
 }
+
 .projekti-textContainer p {
   color: gray;
   font-size: 20px;
 }
+
 @media (max-width: 768px) {
   .projekti-textContainer p {
     font-size: 1rem;
   }
 }
+
 .projekti-textContainer button {
+  position: relative;
   background-color: orange;
   border: none;
   border-radius: 10px;
@@ -123,4 +132,5 @@
   width: 200px;
   cursor: pointer;
   text-transform: uppercase;
+  z-index: 100;
 }
