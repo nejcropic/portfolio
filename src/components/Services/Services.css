@@ -1,14 +1,21 @@
+/* Services Component Wrapper */
 .services {
     scroll-snap-align: center;
     background: linear-gradient(180deg, #0c0c1d, #111132);
-    height: 100%;
+    height: 100vh;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 2rem;
-  }
-  
+}
+@media screen and (max-width: 1000px) {
+    .services {
+        height: 100%;
+    }
+}
+
+/* Text Container */
 .textContainer-services {
     flex: 1;
     align-self: flex-end;
@@ -16,6 +23,7 @@
     align-items: center;
     gap: 20px;
     color: white;
+    padding: 0.5rem;
 }
 @media screen and (max-width: 1000px) {
     .textContainer-services {
@@ -24,22 +32,24 @@
         flex-direction: column;
     }
 }
-.textContainer-services p{
+.textContainer-services p {
     font-weight: 200;
     font-size: 20px;
     color: gray;
     text-align: right;
 }
-.textContainer-services hr{
+.textContainer-services hr {
     width: 500px;
     border: none;
     border-top: 0.5px solid gray;
 }
 @media screen and (max-width: 1000px) {
-    .textContainer-services hr{
+    .textContainer-services hr {
         width: 300px;
     }
 }
+
+/* Title Container */
 .titleContainer-services {
     flex: 2;
     display: flex;
@@ -48,45 +58,50 @@
     color: var(--white);
 }
 @media screen and (max-width: 1000px) {
-    .titleContainer-services{
+    .titleContainer-services {
         width: 100%;
     }
 }
-  .title {
+.title {
     display: flex;
     align-items: center;
     gap: 50px;
-  }
-  @media screen and (max-width: 1000px) {
-    .title{
+}
+@media screen and (max-width: 1000px) {
+    .title {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
 }
-  .title img {
+.title img {
     width: 300px;
     height: 100px;
     border-radius: 20px;
-  }
-  @media screen and (max-width: 1000px) {
-    .title img{
+}
+@media screen and (max-width: 1000px) {
+    .title img {
         width: 200px;
         height: 50px;
     }
-} 
+}
 .title h1 {
-    font-size: 96px;
+    font-size: 3rem;
     font-weight: 100;
 }
 @media screen and (max-width: 1000px) {
-  .title h1{
-    font-size: 2rem;
-  }
+    .title h1 {
+        font-size: 2rem;
+    }
 }
-.title button  {
-    width: 300px;
-    height: 100px;
+@media screen and (min-width: 2000px) {
+    .title h1 {
+        font-size: 4.5rem;
+    }
+}
+.title button {
+    width: 240px;
+    height: 70px;
     border-radius: 50px;
     background-color: orange;
     border: none;
@@ -94,138 +109,217 @@
     cursor: pointer;
 }
 @media screen and (max-width: 1000px) {
-  .title button{
-    font-size: 16px;
-    width: 150px;
-    height: 50px;
-  }
+    .title button {
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+    }
 }
-.listContainer-flex {
-    max-width: 1366px;
+
+/* Services Layout */
+.listContainer {
+    flex: 5;
+    max-width: 1200px;
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: row;
     margin: auto;
-} @media screen and (max-width: 1000px) {
-    .listContainer-flex{
+}
+@media screen and (max-width: 1000px) {
+    .listContainer {
         flex-direction: column;
     }
-  }
-  .listContainer {
-    flex: 2;
-    display: flex;
-    max-width: 1366px;
-    margin: 2rem 0;
-  }
-  @media screen and (max-width: 1000px) {
-    .listContainer{
-        flex-direction: column;
-        width: 100%;
+}
+@media screen and (min-width: 2000px) {
+    .listContainer {
+        max-width: 1500px;
     }
-  }
-  .box {
-    padding: 50px;
-    border: 0.5px solid gray;
+}
+
+/* Layout for Vertical Sections */
+.vertical-layout {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    color: var(--white);
-  }
-  @media screen and (max-width: 1000px) {
-    .box{
-        border: none;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
-    }
-  }
-  /* .box:hover {
-    background: lightgray;
-    color: black;
-  } */
- /*  @media screen and (max-width: 1000px) {
-    .box p{
-        border: none;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
-    }
-  } */
- 
-.box-out {
+    width: 33%;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+/* First and Last Sections (each containing 2 smaller boxes) */
+.first-section, .last-section {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 54%;
+    padding-bottom:  1rem;
 }
-.box-out p {
-    margin: 0.2rem 0;
-    font-size: 1rem;
-    color: var(--gray);
-    text-align: left;
-}
-  /* Bold styling for titles */
-.box p b {
-    color: #444;
+
+/* Middle Section (single large box) */
+.middle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    padding: 1rem 0;
 }
 @media screen and (max-width: 1000px) {
-    .box-out {
-        width: 90%;
-        padding-left: 1rem;
-    }
-    .box-out p{
+    .vertical-layout, .middle-section {
         width: 100%;
-        font-size: 0.85rem;
+        padding: 0;
     }
 }
 
-.box span {
-    font-size: 1rem;
-    color: #555;
+/* Individual Box Styles */
+.box {
+    position: relative;
+    padding: 0.5rem;
+    height: 100%; /* Ensures boxes fill their container's height */
+    width: 100%;
+    box-sizing: border-box;
 }
-
-.box button {
-    padding: 10px;
-    background-color: orange;
-    border: none;
+@media screen and (max-width: 1000px) {
+    .box {
+        padding: 1rem;
+        height: auto;
+    }
+    .box img {
+        border-radius: 3px;
+    }
+}
+.box:hover {
     cursor: pointer;
 }
-
+.large-box {
+    height: 100%; /* Ensures the large box takes up 100% of its container's height */
+}
+.box img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 0;
+}
+.box-flex {
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4));
+}
 @media screen and (max-width: 1000px) {
-    .box button{
-        background-color: transparent;
-        border: 1px solid orange;
-        border-radius: 5px;
-        color: orange;
-        width: 50%;
-        padding: 5px;
+    .box-flex {
+        bottom: 1.25rem;
+        padding: 0.5rem 0.5rem;
     }
 }
 
-.box img {
-    width: 4rem;
-    height: 4rem;
+.box-flex i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
-.box h2 {
-    text-align: right;
+.box-flex h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
 }
-.box-flex {
+
+/* Overlay and Blurred Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 50%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    text-align: center; 
+}
+@media screen and (max-width: 1000px) {
+    .overlay-content {
+        max-width: 90%;
+    }
+}
+.overlay-flex {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+}
+@media screen and (max-width: 1000px) {
+    .overlay-flex {
+        flex-direction: column;
+    }
+}
+.overlay-content h2 {
     margin-bottom: 1rem;
-    width: 100%;
+    font-size: 1.7rem;
+    color: black;
 }
-.box-out span {
-    width: 90%;
+.overlay-content ul {
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: left;
 }
-.box-more {
-    width: 100%;
-    padding-left: 0%;
+@media screen and (max-width: 1000px) {
+    .overlay-content ul {
+        padding: 1.5rem;
+    }
+}
+.overlay-content li {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+.overlay-content ul ul {
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+.overlay-content button {
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.overlay-content button:hover {
+    background-color: darkorange;
+}
+@media screen and (max-width: 1000px) {
+    .overlay-content button {
+        margin-top: 0rem;
+    }
+}
+.overlay-image {
+    max-width: 50%;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; 
 
 }
-.box ul {
-    margin-left: 3rem;
-}
-.box li {
-    font-size: 0.8rem;
-    color: #555;
+@media screen and (max-width: 1000px) {
+    .overlay-image {
+        max-width: 100%;
+        width: 100%;
+    }
 }

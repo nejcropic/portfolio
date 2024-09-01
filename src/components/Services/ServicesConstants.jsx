@@ -1,46 +1,89 @@
-import Spletna from "../../icons/mobile.png";
-import Avtomatizacija from "../../icons/app-development.png";
-import Podatki from "../../icons/data-analysis.png";
-import Naprave from "../../icons/dashboard.png";
+import SpletneStrani from "../../images/ums_comp.png";
+import OdzivenSpletni from "../../images/devices_cutted.png";
+import Dokumenti from "../../images/excel.jpg";
+import Orodja from "../../images/bim.jpg";
 
-export const categories = {
-  "Spletne strani": {
-    icon: Spletna,
+import PodatkiSlika from "../../images/data_analysis.webp";
+import Automation from "../../images/automation.jpg";
+import Obdelava from "../../images/data_manage.png";
+import Gui from "../../images/gui_development.png";
+
+export const categories = [
+  {
+    title: "Spletne strani",
+    icon: "fas fa-globe",
+    image: OdzivenSpletni,
     items: [
-      "Izdelava nove spletne strani",
-      "Posodobitev obstoječe spletne strani",
-      "Odziven spletni dizajn",
+      "Izdelava nove spletne strani, optimizirane za SEO in hitrost nalaganja",
+      "Posodobitev obstoječe spletne strani z modernimi tehnologijami",
+      "Odziven spletni dizajn z uporabo HTML5, CSS3, JavaScript, React",
     ],
   },
-  "Avtomatizacija vsakodnevnih storitev": {
-    icon: Avtomatizacija,
+  {
+    title: "Avtomatizacija dokumentov",
+    icon: "fas fa-file-alt",
+    image: Dokumenti,
     items: [
-      "Generiranje excel in word datotek",
+      "Generiranje kompleksnih Excelovih poročil z makri in avtomatizirano obdelavo podatkov",
+      "Avtomatizirano ustvarjanje Wordovih dokumentov na podlagi predlog",
+      "Pretvorba podatkov v različne oblike (PDF, CSV, JSON)",
+    ],
+  },
+  {
+    title: "Avtomatizacija inženirskih orodij",
+    icon: "fas fa-cogs",
+    image: Orodja,
+    items: [
       {
         title: "Datoteke in programi na različnih inženirskih področjih:",
         subItems: [
-          "Strojništvo (Solidworks, CAD),",
-          "Gradbeništvo (BIM),",
-          "Elektrotehnika (obdelava signalov)",
+          "Strojništvo (Solidworks, CAD - prilagojeni skripti za avtomatizacijo procesov)",
+          "Gradbeništvo (BIM - razvoj orodij za upravljanje z modeli in podatki)",
+          "Elektrotehnika (Obdelava signalov, avtomatizacija meritev, integracija senzorjev)",
         ],
       },
-      "Skripte za avtomatizacijo nalog",
     ],
   },
-  "Obdelava in analiza podatkov": {
-    icon: Podatki,
+  {
+    title: "Obdelava, vizualizacija in analiza podatkov",
+    icon: "fas fa-chart-line",
+    image: PodatkiSlika,
     items: [
-      "Obdelovanje datotek (.csv,  .json,  .xml)",
-      "Vizualizacija podatkov (grafi, interaktivni diagrami)",
-      "Analiza statističnih podatkov in poročanje",
+      "Vizualizacija podatkov (grafi, interaktivni diagrami z Excelom in knjižnicami Pythona)",
+      "Analiza statističnih podatkov in avtomatizirano poročanje",
+      "Obdelovanje datotek (.csv, .json, .xml) z uporabo Python",
+      "Implementacija prilagojenih orodij za analizo in vizualizacijo",
     ],
   },
-  "Komunikacija in upravljanje z napravami": {
-    icon: Naprave,
+  {
+    title: "Komunikacija in integracija naprav",
+    icon: "fas fa-plug",
+    image: Gui,
     items: [
-      "Komunikacije prek kabla (USB, RS232, RS485)",
-      "Izdelava uporabniškega vmesnika",
-      "Integracija naprav (API povezave, MQTT)",
+      "Komunikacije prek kabla (USB, RS232, RS485) in brezžične komunikacije",
+      "Izdelava uporabniškega vmesnika (GUI) z uporabo QT, Tkinter, Electron",
+      "Integracija naprav (API povezave, MQTT, Modbus)",
+      "Razvoj rešitev za nadzor in upravljanje naprav na daljavo",
     ],
   },
-};
+  {
+    title: "Varnost in zaščita podatkov",
+    icon: "fas fa-shield-alt",
+    image: Automation,
+    items: [
+      "Implementacija varnostnih rešitev (SSL certifikati, dvofaktorska avtentikacija)",
+      "Šifriranje podatkov in zaščita zasebnosti",
+      "Preverjanje in optimizacija varnosti aplikacij in sistemov",
+    ],
+  },
+  {
+    title: "Usposabljanje in podpora",
+    icon: "fas fa-hands-helping",
+    image: Obdelava,
+    items: [
+      "Usposabljanje zaposlenih za uporabo novih orodij in sistemov",
+      "Nudimo tehnično podporo in vzdrževanje po implementaciji",
+      "Svetovanje in prilagoditev rešitev glede na potrebe stranke",
+    ],
+  },
+];

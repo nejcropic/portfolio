@@ -1,12 +1,23 @@
 
-.hero {/* 
-  top: -5rem; */ 
-  height: 100dvh;
-  overflow: hidden;
-  background: linear-gradient(180deg, #0c0c1d, #111132);
+.hero {
   position: relative;
+  height: 100dvh;
+  overflow: hidden;/* 
+  background: linear-gradient(180deg, #0c0c1d, #111132); */
   scroll-snap-align: start; 
   font-family: var(--fontFamily-main);
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh; 
+  width: 100vw;
+}
+.background-video video{
+  height: 100%;
+  width: 100%;
+
 }
 .wrapper {
   max-width: 80%;
@@ -31,7 +42,7 @@
     width: 100%;
     gap: 20px;
     margin: 0;
-    top: 10%;
+    top: 5%;
     left: 0;
   }
 }
@@ -50,14 +61,19 @@
 }
 
 .textContainer h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem;;
 }
 @media screen and (max-width: 1000px) {
   .textContainer h1{
     font-size: 2rem;
+    margin-bottom: 10vh;
   }
 }
 .hero-button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: transparent;
   border: none;
 }
@@ -125,8 +141,7 @@ right: 0;
 }
 .slidingTextContainer {
 position: absolute;
-font-size: 10vh;
-top: 20%;
+top: 15%;
 white-space: nowrap;
 color: #ffffff09;
 width: 50%;
@@ -135,6 +150,11 @@ font-weight: bold;
 @media screen and (max-width: 1000px) {
   .slidingTextContainer {
     font-size: 10vh;
-    top: 7%;
+    top: 25%;
   }
+}
+.slidingTextContainer img{
+  height: 2.5rem;
+  width: auto;
+  margin: 0 1rem;  
 }

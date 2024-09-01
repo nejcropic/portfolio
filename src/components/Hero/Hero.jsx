@@ -4,6 +4,8 @@ import CompPhoto from "../../images/comp_python.png";
 import PhonePhoto from "../../images/iphone_ums_hero.png";
 import arrowDown from "../../icons/arrow-square-down.png";
 import NavBar from "../NavBar/NavBar";
+import Video from "../../images/background.mp4";
+import { Html, Css, ReactJs, Python } from "../../index";
 
 const textVariants = {
   initial: {
@@ -19,15 +21,16 @@ const textVariants = {
     },
   },
   scrollButton: {
-    opacity: 0,
-    y: 10,
+    opacity: [0, 1, 0], // Add keyframes for opacity to make it "blink"
+    y: [0, 10, 0], // Add keyframes for up-down motion
     transition: {
       duration: 2,
       repeat: Infinity,
+      repeatType: "loop", // Specify repeatType to loop
     },
-    zIndex: 5,
   },
 };
+
 const imageVariants = {
   initial: {
     x: 500,
@@ -44,11 +47,11 @@ const imageVariants = {
 };
 const sliderVariants = {
   initial: {
-    x: 0,
+    x: "70%",
     backgroundColor: "transparent",
   },
   animate: {
-    x: "-200%",
+    x: "-20%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
@@ -69,6 +72,11 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
   };
   return (
     <div className="hero">
+      {/* <div className="background-video">
+        <video autoplay muted loop>
+          <source src={Video} type="video/mp4" />
+        </video>
+      </div> */}
       <NavBar
         refs={{
           storitveRef,
@@ -92,7 +100,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
               variants={textVariants}
               onClick={() => scrollToRef(projektiRef)}
             >
-              Zadnji projekti
+              Zadnji Projekti
             </motion.button>
             <motion.button
               variants={textVariants}
@@ -101,14 +109,6 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
               Kontakt
             </motion.button>
           </motion.div>
-          <motion.button
-            className="hero-button"
-            variants={textVariants}
-            animate="scrollButton"
-            onClick={() => scrollToRef(storitveRef)}
-          >
-            <i class="fa-solid fa-circle-arrow-down"></i>
-          </motion.button>
         </motion.div>
       </div>
       <motion.div
@@ -117,7 +117,10 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
         initial="initial"
         animate="animate"
       >
-        Python ReactJS
+        <img src={Html} alt="" />
+        <img src={Python} alt="" />
+        <img src={ReactJs} alt="" />
+        <img src={Css} alt="" />
       </motion.div>
       <motion.div
         variants={imageVariants}
@@ -128,6 +131,14 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
         <img className="compImg" src={CompPhoto} alt="" />
         <img className="phoneImg" src={PhonePhoto} alt="" />
       </motion.div>
+      <motion.button
+        className="hero-button"
+        variants={textVariants}
+        animate="scrollButton"
+        onClick={() => scrollToRef(storitveRef)}
+      >
+        <i class="fa-solid fa-circle-arrow-down"></i>
+      </motion.button>
     </div>
   );
 };

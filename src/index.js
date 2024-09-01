@@ -12,6 +12,12 @@ import JozeComp from "./images/joze_comp.png";
 import ToplarComp from "./images/toplar_comp.png";
 import UMSComp from "./images/ums_comp.png";
 import DvojcekComp from "./images/dvojcek_comp.png";
+/* Logos */
+
+import Html from "./icons/html.png";
+import Css from "./icons/social.png";
+import ReactJs from "./icons/atom.png";
+import Python from "./icons/python.png";
 
 const PreloadImages = () => {
   useEffect(() => {
@@ -25,6 +31,10 @@ const PreloadImages = () => {
       ToplarComp,
       UMSComp,
       DvojcekComp,
+      Html,
+      Css,
+      ReactJs,
+      Python,
     ];
 
     imagesToPreload.forEach((imageSrc) => (new Image().src = imageSrc));
@@ -41,6 +51,10 @@ export {
   ToplarComp,
   UMSComp,
   DvojcekComp,
+  Html,
+  Css,
+  ReactJs,
+  Python,
 };
 
 const rootElement = document.getElementById("root");

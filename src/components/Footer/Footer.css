@@ -5,6 +5,7 @@
     padding: 1rem 0;
     text-align: center;
     scroll-snap-align: end;
+    height: 10vh;
 }
 
 .footer-container {
@@ -13,10 +14,11 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    height: 100%;
 }
 
 .footer-button-up {
-    margin-bottom: 1rem; /* Adjust margin for better spacing */
+    margin-bottom: 0.5rem; /* Adjust margin for better spacing */
 }
 
 .footer-button-up button {

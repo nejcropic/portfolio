@@ -66,11 +66,12 @@
 }
 .projekti-imageContainer {
   flex: 1;
-  height: 50%;
+  height: 70%;
 }
 @media (max-width: 768px) {
   .projekti-imageContainer {
     width: 100%;
+    height: 50%;
     max-height: 24rem;
   }
 }
@@ -78,7 +79,8 @@
   width: auto;
   height: 100%;
   object-fit: cover;
-  clip-path: inset(8% 14% 8% 14% round 8%);
+  clip-path: inset(8.5% 14% 8.5% 14% round 8.5%);
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -137,10 +139,43 @@
 }
 
 .projekti-textContainer ul {
-  list-style-type: disc;
-  padding-left: 20px; /* Adjust as needed */
+  list-style-type: none; 
+  padding-left: 25%;
 }
 
 .projekti-textContainer li {
-  margin-bottom: 5px; /* Adjust spacing as needed */
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 5px;
+  font-size: 1rem; 
 }
+.tech-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle; 
+}
+/* added line */
+
+ .timeline-line {
+  position: absolute;
+  top: 0;
+  right: 5%; 
+  width: 4px;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  padding-top: 11rem;
+}
+
+.timeline-date {
+  position: absolute;
+  right: 5%; 
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--mainColor);
+  background-color: white;
+  width: 60px;
+  border-radius: 5px 0 0 5px;
+  font-weight: 600;
+} 

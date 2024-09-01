@@ -1,8 +1,9 @@
-import { useRef, forwardRef } from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./Services.css";
-import { motion, useInView } from "framer-motion";
 import { categories } from "./ServicesConstants";
 import Image from "../../images/logo.png";
+
 const variants = {
   initial: {
     x: -500,
@@ -19,22 +20,50 @@ const variants = {
     },
   },
 };
-const servicesItems = [];
-const Services = forwardRef((props, ref) => {
-  const isInView = useInView(ref, { margin: "-100px", once: true }); // Adding 'once: true' to animate only the first time it's in view
+
+const overlayVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.8,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
+const Services = () => {
+  const [selectedBox, setSelectedBox] = useState(null);
+
+  const handleBoxClick = (index) => {
+    setSelectedBox(index);
+  };
+
+  const closeOverlay = () => {
+    setSelectedBox(null);
+  };
 
   return (
     <motion.div
       className="services"
       variants={variants}
       initial="initial"
-      animate={isInView ? "animate" : "animate"} // Conditional animation trigger
-      ref={ref}
+      animate="animate"
     >
       <motion.div className="textContainer-services" variants={variants}>
         <p>
-          Digitaliziram vaše procese,
-          <br /> poenostavim vaše delo
+          "Inovativne digitalne rešitve,
+          <br /> ki optimizirajo vaše delo"
         </p>
         <hr />
       </motion.div>
@@ -43,7 +72,7 @@ const Services = forwardRef((props, ref) => {
           <img src={Image} alt="" />
           <h1>
             <motion.b whileHover={{ color: "var(--secondaryColor)" }}>
-              Nove
+              Pametne
             </motion.b>{" "}
             ideje,
           </h1>
@@ -51,53 +80,119 @@ const Services = forwardRef((props, ref) => {
         <div className="title">
           <h1>
             <motion.b whileHover={{ color: "var(--secondaryColor)" }}>
-              hitrejše
+              povečana
             </motion.b>{" "}
-            poslovanje.
+            učinkovitost.
           </h1>
           <button>KAJ POČNEM?</button>
         </div>
       </motion.div>
-      <div className="listContainer-flex">
-        {Object.keys(categories).map((category, index) => (
-          <motion.div className="listContainer" key={index} variants={variants}>
-            <motion.div
-              className="box"
-              whileHover={{ background: "lightgray", color: "black" }}
-            >
-              <div className="box-flex">
-                <h2>{category}</h2>
-                <img src={categories[category].icon} alt={category} />
-              </div>
-              <div className="box-out">
-                {categories[category].items.map((item, itemIndex) =>
-                  typeof item === "string" ? (
-                    <p key={itemIndex}>{item}</p>
-                  ) : (
-                    <div className="box-more" key={itemIndex}>
-                      <p>{item.title}</p>
-                      <ul>
-                        {item.subItems.map((subItem, subItemIndex) => (
-                          <li
-                            key={subItemIndex}
-                            style={{ paddingLeft: "10px" }}
-                          >
-                            {subItem}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                )}
-              </div>
 
-              <button>Preberi več</button>
-            </motion.div>
+      {/* New Layout with Three Sections */}
+      <div className="listContainer">
+        <div className="vertical-layout">
+          {/* First Section */}
+          <div className="first-section">
+            {categories.slice(1, 3).map((item, index) => (
+              <motion.div
+                className="box small-box"
+                key={index}
+                onClick={() => handleBoxClick(index + 1)}
+                whileHover={{ color: "black", scale: 1.05 }}
+              >
+                <img src={item.image} alt={item.title} />
+                <div className="box-flex">
+                  <i className={item.icon}></i>
+                  <h2>{item.title}</h2>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        {/* Middle Section */}
+        <div className="middle-section">
+          <motion.div
+            className="box large-box"
+            onClick={() => handleBoxClick(0)}
+            whileHover={{ color: "black", scale: 1.04 }}
+          >
+            <img src={categories[0].image} alt={categories[0].title} />
+            <div className="box-flex">
+              <i className={categories[2].icon}></i>
+              <h2>{categories[0].title}</h2>
+            </div>
           </motion.div>
-        ))}
+        </div>
+
+        {/* Last Section */}
+        <div className="vertical-layout">
+          <div className="last-section">
+            {categories.slice(3, 5).map((item, index) => (
+              <motion.div
+                className="box small-box"
+                key={index}
+                onClick={() => handleBoxClick(index + 3)}
+                whileHover={{ color: "black", scale: 1.05 }}
+              >
+                <img src={item.image} alt={item.title} />
+                <div className="box-flex">
+                  <i className={item.icon}></i>
+                  <h2>{item.title}</h2>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Overlay with Motion */}
+      <AnimatePresence>
+        {selectedBox !== null && (
+          <motion.div
+            className="overlay"
+            variants={overlayVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={closeOverlay}
+          >
+            <div
+              className="overlay-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h2>{categories[selectedBox].title}</h2>
+              <div className="overlay-flex">
+                <img
+                  src={categories[selectedBox].image}
+                  alt={categories[selectedBox].title}
+                  className="overlay-image"
+                />
+                <ul>
+                  {categories[selectedBox].items.map((tech, idx) => (
+                    <li key={idx}>
+                      {typeof tech === "string" ? (
+                        tech
+                      ) : (
+                        <>
+                          <strong>{tech.title}</strong>
+                          <ul>
+                            {tech.subItems.map((subItem, subIndex) => (
+                              <li key={subIndex}>{subItem}</li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button onClick={closeOverlay}>Zapri</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
-});
+};
 
 export default Services;

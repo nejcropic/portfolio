@@ -26,7 +26,14 @@ const Single = ({ item }) => {
               Uporabljene tehnologije: <br />
               <ul>
                 {item.data.map((tech, index) => (
-                  <li key={index}>{tech}</li>
+                  <li key={index}>
+                    <img
+                      src={tech.icon}
+                      alt={tech.name}
+                      className="tech-icon"
+                    />{" "}
+                    {tech.name} {/* Render icon and text */}
+                  </li>
                 ))}
               </ul>
             </p>
@@ -35,12 +42,12 @@ const Single = ({ item }) => {
             </Link>
           </motion.div>
         </div>
+        <div className="timeline-date">{item.date}</div>
       </div>
     </section>
   );
 };
 
-// Use forwardRef to pass the ref down to the div element in Projekti
 const Projekti = forwardRef((props, ref) => {
   const { scrollYProgress } = useScroll({
     target: ref, // This is the external ref from Home.jsx
@@ -58,6 +65,7 @@ const Projekti = forwardRef((props, ref) => {
         <h1>Zadnji projekti</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
+      <div className="timeline-line"></div>
       {items.map((item) => (
         <Single item={item} key={item.id} />
       ))}
