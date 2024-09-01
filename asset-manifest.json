@@ -1,33 +1,40 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.111aa916.css",
-    "main.js": "/portfolio/static/js/main.9f8971ba.js",
+    "main.css": "/portfolio/static/css/main.43681076.css",
+    "main.js": "/portfolio/static/js/main.708e2051.js",
+    "static/media/background.mp4": "/portfolio/static/media/background.fd49493f0edbf1d9a449.mp4",
     "static/media/toplar_comp.png": "/portfolio/static/media/toplar_comp.06e362cca320cca2d0dd.png",
     "static/media/joze_comp.png": "/portfolio/static/media/joze_comp.e0bdd870bfc1e2305c87.png",
     "static/media/dvojcek_comp.png": "/portfolio/static/media/dvojcek_comp.5b96ce3c7a9b58ff7548.png",
-    "static/media/ums_comp.png": "/portfolio/static/media/ums_comp.36e33fbe152f821c34e8.png",
+    "static/media/ums_comp.png": "/portfolio/static/media/ums_comp.8426bd8a117432f2ad82.png",
+    "static/media/devices_cutted.png": "/portfolio/static/media/devices_cutted.70e9433a377ac269d514.png",
     "static/media/iphone_toplar.png": "/portfolio/static/media/iphone_toplar.8e468de7ff9138d49cca.png",
     "static/media/iphone_joze.png": "/portfolio/static/media/iphone_joze.5dfb8c28710ef519f830.png",
     "static/media/iphone_dvojcek.png": "/portfolio/static/media/iphone_dvojcek.6d614eac1a59b82d22e8.png",
     "static/media/comp_python.png": "/portfolio/static/media/comp_python.8a9bda39b4a873016aff.png",
     "static/media/iphone_ums.png": "/portfolio/static/media/iphone_ums.1c5c3b4e73be936b31ca.png",
     "static/media/iphone_ums_hero.png": "/portfolio/static/media/iphone_ums_hero.575ce7b84fb19e65365a.png",
+    "static/media/data_analysis.webp": "/portfolio/static/media/data_analysis.c3db5a5f86fa09e13065.webp",
     "static/media/toplar_phone.png": "/portfolio/static/media/toplar_phone.98ad3202e9a30beb968e.png",
     "static/media/joze_phone.png": "/portfolio/static/media/joze_phone.d9f1cd59ee699aee978a.png",
     "static/media/ums_phone.png": "/portfolio/static/media/ums_phone.3c821dc6ce68e5a5ad4b.png",
+    "static/media/gui_development.png": "/portfolio/static/media/gui_development.9c2fe4f06fa999096cb3.png",
+    "static/media/bim.jpg": "/portfolio/static/media/bim.d0d0e30dc8f4ac0739f9.jpg",
+    "static/media/excel.jpg": "/portfolio/static/media/excel.53dd68691140696eb69b.jpg",
     "static/media/instagram.png": "/portfolio/static/media/instagram.e719d8b29f452a16302d.png",
-    "static/media/data-analysis.png": "/portfolio/static/media/data-analysis.b3d7c39bbebdec2ed514.png",
-    "static/media/dashboard.png": "/portfolio/static/media/dashboard.98e8683dac393aa8c93a.png",
+    "static/media/atom.png": "/portfolio/static/media/atom.5f1949c2c26bbdc381e7.png",
+    "static/media/automation.jpg": "/portfolio/static/media/automation.ea2400e678e232bad98d.jpg",
+    "static/media/python.png": "/portfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
     "static/media/github.png": "/portfolio/static/media/github.f3d873d71aa989badfd2.png",
-    "static/media/app-development.png": "/portfolio/static/media/app-development.f9d169e80e84e333a6d1.png",
-    "static/media/mobile.png": "/portfolio/static/media/mobile.d88ec36c889ea5a99296.png",
+    "static/media/social.png": "/portfolio/static/media/social.d1a3c1e59ca82dbdf815.png",
+    "static/media/html.png": "/portfolio/static/media/html.6e930594286d8afe4c79.png",
     "static/media/linkedin.png": "/portfolio/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/portfolio/index.html",
-    "main.111aa916.css.map": "/portfolio/static/css/main.111aa916.css.map",
-    "main.9f8971ba.js.map": "/portfolio/static/js/main.9f8971ba.js.map"
+    "main.43681076.css.map": "/portfolio/static/css/main.43681076.css.map",
+    "main.708e2051.js.map": "/portfolio/static/js/main.708e2051.js.map"
   },
   "entrypoints": [
-    "static/css/main.111aa916.css",
-    "static/js/main.9f8971ba.js"
+    "static/css/main.43681076.css",
+    "static/js/main.708e2051.js"
   ]
 }
